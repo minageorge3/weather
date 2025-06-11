@@ -18,12 +18,12 @@ const invalid = document.querySelector(".invalid");
 const weather = document.querySelector(".weather");
 const details = document.querySelector(".details");
 const weatherImages = {
-  Clear: "/images/clear.png",
-  Snow: "/images/snow.png",
-  Rain: "/images/rain.png",
-  Clouds: "/images/clouds.png",
-  Mist: "/images/clouds.png",
-  Drizzle: "/images/rain.png",
+  Clear: "images/clear.png",
+  Snow: "images/snow.png",
+  Rain: "images/rain.png",
+  Clouds: "images/clouds.png",
+  Mist: "images/clouds.png",
+  Drizzle: "images/rain.png",
 };
 const weatherBackGround = {
   Clear:
@@ -49,7 +49,7 @@ async function checkWeather(city) {
     wind.innerHTML = data.wind.speed + " km/h";
 
     weatherIcon.src =
-      weatherImages[data.weather[0].main] || "/images/clear.png";
+      weatherImages[data.weather[0].main] || "images/clear.png";
     card.style.background =
       weatherBackGround[data.weather[0].main] ||
       "linear-gradient(rgb(0, 145, 255), rgba(15, 212, 110, 0.561))";
